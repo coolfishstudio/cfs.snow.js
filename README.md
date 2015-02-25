@@ -32,3 +32,5 @@ canvas 下雪场景 不会影响页面使用 使用方式非常简单
 >20150225 v0.0.1
 
 发布最初版
+
+参考样例 ： http://show.coolfishstudio.com/
