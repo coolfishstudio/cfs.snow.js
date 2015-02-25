@@ -1,5 +1,5 @@
 {
-  "name": "cfs.show.js",
+  "name": "cfs.snow.js",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -8,7 +8,7 @@
   "main": "app",
   "repository": {
     "type": "git",
-    "url": "git@github.com:coolfishstudio/cfs.show.js.git"
+    "url": "git@github.com:coolfishstudio/cfs.snow.js.git"
   },
   "author": {
     "name": "coolfishstudio",

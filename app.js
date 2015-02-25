@@ -5,7 +5,7 @@ var http = require('http'),
 	onFinished = require('on-finished');
 
 var port = 9238;//端口号
-var filePath = '/CFS.Show.min.js';//下载路径
+var filePath = '/CFS.Snow.min.js';//下载路径
 
 /*
 	这是一个简单的服务器 
@@ -18,7 +18,7 @@ var server = http.createServer(function(req, res){
 			serve(__dirname + '/index.html', 'text/html');
 		}else if('/src/' == req.url.substr(0,5)){
 			serve(__dirname + req.url, 'text/javascript');
-		}else if('/download/CFS.Show.min.js' == req.url){
+		}else if('/download/CFS.Snow.min.js' == req.url){
 			res.setHeader('Content-Type', 'text/javascript')
 			res.setHeader('Content-Disposition', contentDisposition(__dirname + filePath));
 			var stream = fs.createReadStream(__dirname + filePath);

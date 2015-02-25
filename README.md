@@ -1,4 +1,4 @@
-# cfs.show.js
+# cfs.snow.js
 
 canvas 下雪场景 不会影响页面使用 使用方式非常简单
 
@@ -6,11 +6,11 @@ canvas 下雪场景 不会影响页面使用 使用方式非常简单
 
 例如
 
-```<script type="text/javascript" src="/js/CFS.Show.min.js"></script>```
+```<script type="text/javascript" src="/js/CFS.Snow.min.js"></script>```
 
 引入我们的JS文件
 
-执行 ```show.down()```命令
+执行 ```snow.down()```命令
 
 支持移动端，对过期元素进行了处理
 
@@ -27,10 +27,10 @@ canvas 下雪场景 不会影响页面使用 使用方式非常简单
 
 定义方式 如下
 
-``` show.info.zIndex = 500; ```
+``` snow.info.zIndex = 500; ```
 
 >20150225 v0.0.1
 
 发布最初版
 
-参考样例 ： http://show.coolfishstudio.com/
+参考样例 ： http://snow.coolfishstudio.com/

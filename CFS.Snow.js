@@ -1,4 +1,4 @@
-var show = {
+var snow = {
 	info : {
 		top : 0,
 		left : 0,
@@ -13,16 +13,16 @@ var show = {
 		var oCanvas = document.createElement('canvas');
 		oCanvas.style.position = 'fixed';
 		oCanvas.style.pointerEvents = 'none';
-		oCanvas.style.top = show.info.top + 'px';
-		oCanvas.style.left = show.info.left + 'px';
-		oCanvas.style.zIndex = show.info.zIndex;
+		oCanvas.style.top = snow.info.top + 'px';
+		oCanvas.style.left = snow.info.left + 'px';
+		oCanvas.style.zIndex = snow.info.zIndex;
 		oCanvas.width = win_Width;
 		oCanvas.height = win_Height;
 		document.body.appendChild(oCanvas);
 		//创建雪
-		var arrShow = [];
-		for(var i = 0; i < show.info.number; i++){
-			arrShow.push({
+		var arrSnow = [];
+		for(var i = 0; i < snow.info.number; i++){
+			arrSnow.push({
 				x : Math.random() * win_Width,//雪的横坐标
 				y : Math.random() * win_Height,//雪的纵坐标
 				r : Math.random() * 4 + 1,//雪的半径
@@ -40,21 +40,21 @@ var show = {
 			gd.beginPath();
 			//绘制雪
 			for(var i = 0; i < 70; i++){
-				var _showObj = arrShow[i];
-				gd.moveTo(_showObj.x, _showObj.y);
-				gd.arc(_showObj.x, _showObj.y, _showObj.r, 0, Math.PI * 2, 0);
+				var _snowObj = arrSnow[i];
+				gd.moveTo(_snowObj.x, _snowObj.y);
+				gd.arc(_snowObj.x, _snowObj.y, _snowObj.r, 0, Math.PI * 2, 0);
 			}
 			gd.fill();
 			speed += 0.01;
 			//处理雪下落
 			for(var i = 0; i < 70; i++){
-				var _showObj = arrShow[i];
-				_showObj.y += Math.cos(speed + _showObj.n) + 1 + _showObj.r / 2;
-				_showObj.x += Math.sin(speed) * 2;
-				if(_showObj.x > win_Width + 5 || _showObj.x < -5 || _showObj.y > win_Height){
-					arrShow[i] = i % 3 > 0 ? {x : Math.random() * win_Width, y : -10, r : _showObj.r, n : _showObj.n} : Math.sin(speed) > 0 ? {x : -5, y : Math.random() * win_Height, r : _showObj.r, n : _showObj.n} : {x : win_Width + 5, y : Math.random() * win_Height, r : _showObj.r, n : _showObj.n};
+				var _snowObj = arrSnow[i];
+				_snowObj.y += Math.cos(speed + _snowObj.n) + _snowObj.r / 2;
+				_snowObj.x += Math.sin(speed) * 2;
+				if(_snowObj.x > win_Width + 5 || _snowObj.x < -5 || _snowObj.y > win_Height){
+					arrSnow[i] = i % 3 > 0 ? {x : Math.random() * win_Width, y : -10, r : _snowObj.r, n : _snowObj.n} : Math.sin(speed) > 0 ? {x : -5, y : Math.random() * win_Height, r : _snowObj.r, n : _snowObj.n} : {x : win_Width + 5, y : Math.random() * win_Height, r : _snowObj.r, n : _snowObj.n};
 				}
 			}
-		},60);
+		},15);
 	}
 };
