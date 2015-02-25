@@ -1,0 +1,22 @@
+{
+  "name": "cfs.show.js",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "main": "app",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:coolfishstudio/cfs.show.js.git"
+  },
+  "author": {
+    "name": "coolfishstudio",
+    "email": "461836324@qq.com"
+  },
+  "dependencies": {
+    "content-disposition": "^0.5.0",
+    "destroy": "^1.0.3",
+    "on-finished": "^2.2.0"
+  }
+}
